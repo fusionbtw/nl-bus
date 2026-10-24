@@ -142,9 +142,9 @@ header{
   display:flex;flex-direction:column;align-items:center;gap:18px;
   perspective:1400px;
 }
-.totem-scene{position:relative;padding:10px 44px 26px;z-index:1}
+.totem-scene{position:relative;padding:10px 50px 26px;z-index:1}
 .totem{
-  position:relative;width:322px;
+  position:relative;width:404px;
   transform-style:preserve-3d;
   transition:transform .25s ease;
 }
@@ -195,21 +195,22 @@ header{
 /* chips de rota */
 .chip{border:1px solid #D5E4E8;background:#fff;border-radius:999px;font-size:10px;font-weight:700;color:#5C7A88;padding:2px 9px;cursor:pointer}
 .chip-on{background:var(--brand-deep);border-color:var(--brand-deep);color:#fff}
-/* celular no lugar do totem, mesma tela de 300px */
-.phone{
-  position:relative;width:322px;padding:10px;border-radius:44px;
+/* tablet no lugar do totem, tela maior */
+.tablet{
+  position:relative;width:404px;padding:12px;border-radius:30px;
   background:linear-gradient(135deg,#FBFDFD 0%,#E4EAEC 60%,#D5DDE0 100%);
   box-shadow:0 30px 56px rgba(2,10,18,.5),inset 0 2px 3px rgba(255,255,255,.9),inset 0 0 0 2px rgba(10,32,51,.08);
   transform:translateZ(-10px);
 }
-.phone::before,.phone::after{content:"";position:absolute;width:3px;border-radius:2px;background:#C6D0D3}
-.phone::before{left:-3px;top:120px;height:52px}
-.phone::after{right:-3px;top:104px;height:78px}
-.phone-notch{
-  position:absolute;top:18px;left:50%;transform:translateX(-50%);
-  width:78px;height:18px;border-radius:999px;background:#0A1B26;z-index:6;
+.tablet::before,.tablet::after{content:"";position:absolute;width:3px;border-radius:2px;background:#C6D0D3}
+.tablet::before{left:-3px;top:110px;height:40px;box-shadow:0 52px 0 #C6D0D3}
+.tablet::after{right:-3px;top:100px;height:68px}
+.tablet-cam{
+  position:absolute;top:22px;left:50%;transform:translateX(-50%);
+  width:9px;height:9px;border-radius:50%;background:#0A1B26;z-index:6;
 }
-.phone .cam-dot{display:none}
+.tablet .cam-dot{display:none}
+.tablet .screen{width:380px;height:560px}
 .screen-inner{
   position:relative;width:100%;height:100%;
   background:#F5FAFB;border-radius:20px 20px 6px 6px;overflow:hidden;

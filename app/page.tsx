@@ -352,15 +352,15 @@ export default function Home() {
             <a className="tag-note" href={IG_PROFILE} target="_blank" rel="noopener">@mobilidade.nlbus: acompanhe o projeto no Instagram</a>
           </div>
 
-          {/* TELA INTERATIVA NO CELULAR */}
+          {/* TELA INTERATIVA NO TABLET */}
           <div className="totem-stage" id="totem">
             <div className="totem-scene" ref={sceneRef} onPointerMove={handlePointer} onPointerLeave={resetTilt}>
               <div className="totem-float">
               <div className="totem" ref={totemRef}>
-                <div className="phone">
-                  <span className="phone-notch" aria-hidden="true" />
+                <div className="tablet">
+                  <span className="tablet-cam" aria-hidden="true" />
                 <div className="screen">
-                  <div className="screen-inner" role="group" aria-label="Aplicativo do NL Bus simulado no celular" onPointerDown={(e) => handleTap(e, "totem")}>
+                  <div className="screen-inner" role="group" aria-label="Aplicativo do NL Bus simulado no tablet" onPointerDown={(e) => handleTap(e, "totem")}>
                     <span key="cam" className="cam-dot" aria-hidden="true" />
                     <div key="app-top" className="app-top">
                       <button type="button" className="search" onClick={openSearch}>
@@ -392,7 +392,7 @@ export default function Home() {
                       {/* MAPA */}
                       <div className="panel" data-panel="mapa" role="tabpanel" hidden={activeTab !== "mapa"}>
                         <div className="route-map" aria-hidden="true">
-                          <svg viewBox="0 0 280 380">
+                          <svg viewBox="0 0 280 380" preserveAspectRatio="xMidYMid slice">
                             <rect width="280" height="380" fill="#EFF7F8" />
                             <g stroke="#D8E7EA" strokeWidth="5" fill="none">
                               <path d="M0 90 H280" /><path d="M0 200 H280" /><path d="M0 300 H280" />
